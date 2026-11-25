@@ -1,0 +1,18 @@
+{
+  "scenario": "feature_extraction",
+  "unit": "logical_block",
+  "target_ratio": 1.0,
+  "total_backbone_blocks": 28,
+  "frozen_backbone_blocks": 28,
+  "realized_block_ratio": 1.0,
+  "last_frozen_block": "head_conv",
+  "first_trainable_block": null,
+  "total_backbone_tensors": 338,
+  "frozen_backbone_tensors": 338,
+  "realized_tensor_ratio": 1.0,
+  "last_frozen_name": "bn2.bias",
+  "first_trainable_name": null,
+  "total_params": 11092015,
+  "trainable_params": 395783,
+  "frozen_params": 10696232
+}

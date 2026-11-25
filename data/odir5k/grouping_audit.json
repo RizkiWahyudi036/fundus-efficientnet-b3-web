@@ -1,0 +1,14 @@
+{
+  "input_images": 4550,
+  "metadata_coverage": {
+    "patient_id": 4550,
+    "source_id": 0
+  },
+  "removed_identical_inputs": 0,
+  "candidate_pairs": 1065,
+  "phash_policy": "report_only",
+  "confirmed_pairs_csv": null,
+  "retained_images": 4550,
+  "groups": 2358,
+  "largest_group": 2
+}

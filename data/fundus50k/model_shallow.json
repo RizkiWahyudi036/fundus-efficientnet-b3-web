@@ -1,0 +1,18 @@
+{
+  "scenario": "shallow",
+  "unit": "logical_block",
+  "target_ratio": 0.8,
+  "total_backbone_blocks": 28,
+  "frozen_backbone_blocks": 22,
+  "realized_block_ratio": 0.7857142857142857,
+  "last_frozen_block": "blocks.5.2",
+  "first_trainable_block": "blocks.5.3",
+  "total_backbone_tensors": 338,
+  "frozen_backbone_tensors": 270,
+  "realized_tensor_ratio": 0.7988165680473372,
+  "last_frozen_name": "blocks.5.2.bn3.bias",
+  "first_trainable_name": "blocks.5.3.conv_pw.weight",
+  "total_params": 11092015,
+  "trainable_params": 6821823,
+  "frozen_params": 4270192
+}

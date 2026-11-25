@@ -1,0 +1,64 @@
+{
+  "dataset": "odir5k_only",
+  "protocol_version": "v4_clean_opt",
+  "split_id": "ec54de9ed1c6a7f176d4f4ecb47cd2658a5c27c3d4c8791253baa11cc5e8b466",
+  "data_identity": "3450dcf977a1b4a4fe646d1320ff7f05bd0b608643253649d9ebfdaa577a77ad",
+  "split_policy": "verified_profile_milp_v3",
+  "data_config": {
+    "image_size": 300,
+    "split_seed": 42,
+    "near_hash_distance": 3
+  },
+  "config": {
+    "seed": 42,
+    "image_size": 300,
+    "batch_size": 32,
+    "eval_batch_size": 64,
+    "num_workers": 1,
+    "max_epochs": 30,
+    "early_stopping_patience": 10,
+    "warmup_epochs": 2,
+    "lr_scheduler": "warmup_cosine",
+    "min_lr_ratio": 0.005,
+    "lr_backbone": 2e-05,
+    "lr_classifier": 0.0002,
+    "weight_decay": 0.01,
+    "drop_path_rate": 0.2,
+    "label_smoothing": 0.05,
+    "gradient_clip": 1.0,
+    "max_train_samples_per_epoch": 8000,
+    "model_name": "efficientnet_b3.ra2_in1k",
+    "loss_mode": "balanced_power",
+    "weight_power": 0.5,
+    "deterministic": false
+  },
+  "labels": [
+    "N",
+    "D",
+    "G",
+    "C",
+    "A",
+    "H",
+    "M"
+  ],
+  "balancing": "balanced_power",
+  "loss_weights": [
+    0.5207265484492155,
+    0.7299225200292848,
+    1.8636744465566113,
+    1.6457014715109584,
+    1.7023775057179658,
+    2.625631237234085,
+    1.8636744465566113
+  ],
+  "model_protocol": "head_bn_silu_droppath02_amp_eval",
+  "preprocessing": "RGB EXIF transpose, black-margin fundus crop (thresh=7, 2% pad), aspect-preserving bilinear letterbox 300x300, ImageNet normalization",
+  "augmentation": "HFlip .5, VFlip .3, rotation 20, jitter .2/.2/.15/.04, affine translate .05 scale .9-1.1, RandomErasing .25 (.02-.10)",
+  "freeze_unit": "logical_block",
+  "versions": {
+    "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+    "torch": "2.11.0+cu130",
+    "timm": "1.0.30"
+  },
+  "run_id": "aa52edfb9c3120c70e528e50f1819f0e5fd19b05510b9c38909160632b60cf75"
+}

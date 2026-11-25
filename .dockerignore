@@ -1,0 +1,8 @@
+.git
+.gitignore
+paket_data_uji
+__pycache__
+*.pyc
+.venv
+.DS_Store
+Thumbs.db

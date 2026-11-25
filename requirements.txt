@@ -1,0 +1,7 @@
+streamlit>=1.50.0,<2.0.0
+onnxruntime>=1.19.0,<2.0.0
+huggingface_hub>=0.25.0,<3.0.0
+numpy>=1.26.0,<3.0.0
+pillow>=10.4.0,<13.0.0
+pandas>=2.2.0,<3.0.0
+altair>=5.4.0,<7.0.0
