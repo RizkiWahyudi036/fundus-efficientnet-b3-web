@@ -90,6 +90,11 @@ def preprocess_uploaded_image(
 
     try:
         with Image.open(BytesIO(raw_bytes)) as src:
+            max_pixels = Image.MAX_IMAGE_PIXELS
+            if max_pixels is not None and (src.width * src.height) > max_pixels:
+                raise InferenceError(
+                    "Resolusi citra melebihi batas maksimum 25 megapiksel. Perkecil dimensi gambar lalu coba kembali."
+                )
             original_rgb = ImageOps.exif_transpose(src).convert("RGB")
     except (UnidentifiedImageError, OSError, Image.DecompressionBombError) as exc:
         raise InferenceError(
